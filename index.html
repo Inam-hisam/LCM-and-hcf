@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Lcm&Hcf</title>
+  <style type="text/css" >
+  h1{
+    text-align: center;
+    background-image: repeating-linear-gradient(brown,yellow,green);
+    color : black;
+ }
+.main{
+  height : auto;
+  width: 280px;
+  background-color: steelblue;
+  align-items: center;
+  margin : 50px 25px;
+  padding: 10px; 
+  border: 3px solid black;
+  border-radius: 10px; 
+  font-size: 20px;
+  box-shadow: black ;
+  
+  
+}
+input{
+  height: 25px;
+  width: 70px;
+  margin: 10px;
+  border: 2px solid cadetblue;
+  border-radius: 5px;
+}
+button{
+  height: 50px;
+  width: 100px;
+  margin-left: 100px;
+  font-family: initial;
+  font-size: 20px;
+  background-color: dodgerblue;
+  color: white;
+  border: 2px solid black; 
+  border-radius: 7px;
+  
+}
+button:hover{
+  background-color: black; 
+  color: red;
+}
+    
+  </style>
+</head>
+
+<body><h1> Find LCM and HCF<h1/>
+  
+  <div class="main">
+    <h2 align="center"> Enter numbers</h2>
+   
+    <div class="inp">
+      
+      1st<input type="number" id="fn" placeholder="enter first number">
+      2nd <input type="number" id="sn" placeholder="enter second number"><br>
+      <button onclick="answer()">answer</button> <hr>
+      <h2 id="lcm"></h2>
+      <h2 id="hcf"></h2>
+      
+    </div>
+  </div>
+  
+ 
+  
+  
+<script>
+function answer(){  
+  var a = document.getElementById('fn'). value;
+  var b = document.getElementById('sn'). value;
+  for(var i=1; i<=a*b;i++){
+    if(i%a==0 && i%b==0){
+      break ;
+    }
+    
+  }
+  for(var k=Math.min(a,b); k>0; k--){
+    if(a%k==0 && b%k==0)
+    { break;}
+  }
+ document.getElementById('lcm').innerText= 'LCM = ' +i; 
+ document.getElementById('hcf').innerText= 'HCF = '+k;
+ }
+</script>
+</body>
+
+</html>
